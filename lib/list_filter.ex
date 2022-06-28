@@ -1,9 +1,6 @@
 defmodule ListFilter do
   def call(list) do
-    intList = filterInt(list)
-    oddList = filterOdd(intList)
-
-    Enum.count(oddList)
+    list |> filterInt() |> filterOdd() |> Enum.count()
   end
 
   defp filterInt(list) do
